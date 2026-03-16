@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main # Tu rama de GitHub
+
+media_folder: "assets/img" # Donde se guardan las fotos
+public_folder: "/assets/img"
+
+collections:
+  - name: "productos"
+    label: "Productos de Sterna"
+    folder: "content" # Donde se guardará el JSON
+    create: true
+    extension: json
+    format: json
+    fields:
+      - { label: "Nombre del Producto", name: "nombre", widget: "string" }
+      - { label: "Precio", name: "precio", widget: "number" }
+      - { label: "Imagen", name: "imagen", widget: "image" }
+      - { label: "Descripción", name: "body", widget: "markdown" }
